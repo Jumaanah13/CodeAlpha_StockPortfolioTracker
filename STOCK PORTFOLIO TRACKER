@@ -1,0 +1,21 @@
+stock_portfolio = {
+    'FreshMart': {'shares': 15, 'price': 120},
+    'TechNova': {'shares': 8, 'price': 950},
+    'GreenEnergy': {'shares': 12, 'price': 310},
+    'MediCarePlus': {'shares': 5, 'price': 780}
+}
+
+# Calculate total investment
+def calculate_total_investment(portfolio):
+    total = 0
+    print("\n📈 Stock Investment Summary:")
+    print("-" * 40)
+    for stock, info in portfolio.items():
+        investment = info['shares'] * info['price']
+        total += investment
+        print(f"{stock}: {info['shares']} shares x ${info['price']} = ${investment}")
+    print("-" * 40)
+    print(f"💰 Total Investment: ${total}")
+
+# Run the tracker
+calculate_total_investment(stock_portfolio)
